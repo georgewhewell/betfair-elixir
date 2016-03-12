@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"AccountAPING/v1/getAccountDetails\",\"params\":[]}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/account/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":{\"currencyCode\":\"EUR\",\"firstName\":\"Barack\",\"lastName\":\"Obama\",\"localeCode\":\"en\",\"region\":\"GBR\",\"timezone\":\"Europe/London\",\"discountRate\":0.0,\"pointsBalance\":0,\"countryCode\":\"GB\"}}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "207",
+        "Set-Cookie": "weird_tracker;expires=Thu, 1-Jan-2016 00:00:00 GMT;path=/;httponly"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

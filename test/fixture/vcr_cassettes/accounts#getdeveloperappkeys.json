@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"AccountAPING/v1/getDeveloperAppKeys\",\"params\":[]}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/account/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"appName\":\"Barry Bet\",\"appId\":123456,\"appVersions\":[{\"owner\":\"barack\",\"versionId\":12345,\"version\":\"1.0-DELAY\",\"applicationKey\":\"SomeKeY\",\"delayData\":true,\"subscriptionRequired\":true,\"ownerManaged\":false,\"active\":true},{\"owner\":\"barack\",\"versionId\":12346,\"version\":\"1.0\",\"applicationKey\":\"app_k3y\",\"delayData\":false,\"subscriptionRequired\":true,\"ownerManaged\":false,\"active\":true}]}]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "437",
+        "Set-Cookie": "wierd_tracker, 1-Jan-2016 00:00:00 GMT;path=/;httponly"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"AccountAPING/v1/listCurrencyRates\",\"params\":{\"fromCurrency\":\"GBP\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/account/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"currencyCode\":\"USD\",\"rate\":1.2},{\"currencyCode\":\"GBP\",\"rate\":1.0},{\"currencyCode\":\"AUD\",\"rate\":2.1},{\"currencyCode\":\"EUR\",\"rate\":1.000},{\"currencyCode\":\"CAD\",\"rate\":6.7},{\"currencyCode\":\"HKD\",\"rate\":4.1},{\"currencyCode\":\"NOK\",\"rate\":10.1},{\"currencyCode\":\"SGD\",\"rate\":6.2},{\"currencyCode\":\"SEK\",\"rate\":12.1},{\"currencyCode\":\"DKK\",\"rate\":9.1}]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "500",
+        "Set-Cookie": "weird_tracker;expires=Thu, 21-Jan-2016 01:35:08 GMT;path=/;httponly"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

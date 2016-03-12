@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "username=barack&password=obama",
+      "headers": {
+        "Accept": "application/json",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://identitysso.betfair.com/api/certlogin"
+    },
+    "response": {
+      "body": "{\"sessionToken\":\"535510nt0k3n\",\"loginStatus\":\"SUCCESS\"}",
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "87",
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

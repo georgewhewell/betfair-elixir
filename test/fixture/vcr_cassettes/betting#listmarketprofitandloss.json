@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"SportsAPING/v1.0/listMarketProfitAndLoss\",\"params\":{\"marketIds\":[\"1.118474828\"]}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/betting/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "29"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

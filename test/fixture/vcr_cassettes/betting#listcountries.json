@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"SportsAPING/v1.0/listCountries\",\"params\":{\"maxResults\":1,\"filter\":{\"inPlayOnly\":true}}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/betting/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"countryCode\":\"BR\",\"marketCount\":1},{\"countryCode\":\"GB\",\"marketCount\":3},{\"countryCode\":\"CN\",\"marketCount\":3},{\"countryCode\":\"TR\",\"marketCount\":28},{\"countryCode\":\"EG\",\"marketCount\":42},{\"countryCode\":\"HK\",\"marketCount\":29},{\"countryCode\":\"IL\",\"marketCount\":18},{\"countryCode\":\"IN\",\"marketCount\":3}]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "328"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

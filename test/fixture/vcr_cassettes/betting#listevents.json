@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"SportsAPING/v1.0/listEvents\",\"params\":{\"maxResults\":1,\"filter\":{\"inPlayOnly\":true}}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/betting/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"event\":{\"id\":\"27656572\",\"name\":\"Bayi Rockets v Tianjin\",\"countryCode\":\"CN\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T11:35:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27656573\",\"name\":\"Beijing BG / Beikong Fl v Beijing\",\"countryCode\":\"CN\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T11:35:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27656574\",\"name\":\"Fujian v Jiangsu Dragons\",\"countryCode\":\"CN\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T11:35:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27660036\",\"name\":\"Rwanda A v Gabon A\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T13:00:00.000Z\"},\"marketCount\":22},{\"event\":{\"id\":\"27655071\",\"name\":\"Aswan FC v Al Mokawloon\",\"countryCode\":\"EG\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:00:00.000Z\"},\"marketCount\":22},{\"event\":{\"id\":\"27655070\",\"name\":\"El Shorta v El Geish\",\"countryCode\":\"EG\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:00:00.000Z\"},\"marketCount\":20},{\"event\":{\"id\":\"27660034\",\"name\":\"Baroda v Uttar Pradesh\",\"countryCode\":\"IN\",\"timezone\":\"Asia/Calcutta\",\"openDate\":\"2016-01-20T13:00:00.000Z\"},\"marketCount\":3},{\"event\":{\"id\":\"27657530\",\"name\":\"Bucaspor v Rizespor\",\"countryCode\":\"TR\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:00:00.000Z\"},\"marketCount\":28},{\"event\":{\"id\":\"27653651\",\"name\":\"Stewart Anderson v Mervyn King\",\"countryCode\":\"GB\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T10:00:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27653714\",\"name\":\"Yuen Long (Res) v Wong Tai Sin (Res)\",\"countryCode\":\"HK\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:30:00.000Z\"},\"marketCount\":14},{\"event\":{\"id\":\"27659976\",\"name\":\"MS Julis U19 v Hapoel Hadera U19\",\"countryCode\":\"IL\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:45:00.000Z\"},\"marketCount\":18},{\"event\":{\"id\":\"27653763\",\"name\":\"Sparta Prague v Trencin\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T13:00:00.000Z\"},\"marketCount\":24},{\"event\":{\"id\":\"27653705\",\"name\":\"Eastern AA (Res) v Southern Dist RSA (Res)\",\"countryCode\":\"HK\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:30:00.000Z\"},\"marketCount\":15},{\"event\":{\"id\":\"27659913\",\"name\":\"Slovacko v Trinec\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T13:30:00.000Z\"},\"marketCount\":30},{\"event\":{\"id\":\"27640092\",\"name\":\"Trap Challenges\",\"countryCode\":\"GB\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-12T18:28:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27662234\",\"name\":\"Vincent Jaensch-Mueller v Cem Ilkel\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T13:10:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27662233\",\"name\":\"Oscar Otte v Christian Hirschmueller\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T12:55:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27659898\",\"name\":\"HNK Gorica v Hrvatski Dragovoljac\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T12:00:00.000Z\"},\"marketCount\":24},{\"event\":{\"id\":\"27662231\",\"name\":\"Kevin Krawietz v Tomas Papik\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T12:00:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27659897\",\"name\":\"Gorica v Austria Klagenfurt\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T13:00:00.000Z\"},\"marketCount\":30},{\"event\":{\"id\":\"27659041\",\"name\":\"Westports Malaysia Drag v Hitech Bangkok City\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T12:48:00.000Z\"},\"marketCount\":3},{\"event\":{\"id\":\"27659068\",\"name\":\"Enisey Krasnoyarsk v Pallacanestro Cantù\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T12:10:00.000Z\"},\"marketCount\":3},{\"event\":{\"id\":\"27656578\",\"name\":\"Shandong v Jilin\",\"countryCode\":\"CN\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T11:35:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27659872\",\"name\":\"Alex Marshall v Mark Dawes\",\"countryCode\":\"GB\",\"timezone\":\"Europe/London\",\"openDate\":\"2016-01-20T13:00:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27656577\",\"name\":\"Qingdao v Sichuan\",\"countryCode\":\"CN\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-20T11:35:00.000Z\"},\"marketCount\":1},{\"event\":{\"id\":\"27658513\",\"name\":\"Lapentti v Clezar\",\"countryCode\":\"BR\",\"timezone\":\"UTC\",\"openDate\":\"2016-01-18T21:23:00.000Z\"},\"marketCount\":1}]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "4024"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

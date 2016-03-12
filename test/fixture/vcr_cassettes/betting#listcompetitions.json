@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"SportsAPING/v1.0/listCompetitions\",\"params\":{\"maxResults\":1,\"filter\":{\"inPlayOnly\":true}}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/betting/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"competition\":{\"id\":\"801976\",\"name\":\"Egyptian Premier\"},\"marketCount\":42,\"competitionRegion\":\"EGY\"},{\"competition\":{\"id\":\"8404440\",\"name\":\"Chinese CBA 2015/16\"},\"marketCount\":5,\"competitionRegion\":\"CHN\"},{\"competition\":{\"id\":\"7672122\",\"name\":\"CAF African Nations Championship\"},\"marketCount\":22,\"competitionRegion\":\"International\"},{\"competition\":{\"id\":\"3085802\",\"name\":\"Hong Kong Reserve Division League\"},\"marketCount\":29,\"competitionRegion\":\"HKG\"},{\"competition\":{\"id\":\"8403153\",\"name\":\"FIBA Europe Cup 2015/16\"},\"marketCount\":3,\"competitionRegion\":\"International\"},{\"competition\":{\"id\":\"8708286\",\"name\":\"ITF Men Kaarst, Germany\"},\"marketCount\":3,\"competitionRegion\":\"International\"},{\"competition\":{\"id\":\"19564\",\"name\":\"Turkish Cup\"},\"marketCount\":28,\"competitionRegion\":\"TUR\"},{\"competition\":{\"id\":\"8403231\",\"name\":\"AirAsia ASEAN Basketball League 2015-2016\"},\"marketCount\":3,\"competitionRegion\":\"International\"},{\"competition\":{\"id\":\"8556896\",\"name\":\"U19 Liga Leumit North\"},\"marketCount\":18,\"competitionRegion\":\"ISR\"},{\"competition\":{\"id\":\"8616348\",\"name\":\"Friendly\"},\"marketCount\":108,\"competitionRegion\":\"International\"},{\"competition\":{\"id\":\"8616563\",\"name\":\"World Indoor Singles 2016\"},\"marketCount\":2,\"competitionRegion\":\"GBR\"},{\"competition\":{\"id\":\"8675942\",\"name\":\"Syed Mushtaq Ali Trophy 2016\"},\"marketCount\":3,\"competitionRegion\":\"IND\"},{\"competition\":{\"id\":\"8682766\",\"name\":\"Rio de Janeiro Challenger 2016\"},\"marketCount\":1,\"competitionRegion\":\"BRA\"}]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "1497"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

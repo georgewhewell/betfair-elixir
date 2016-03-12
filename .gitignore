@@ -1,0 +1,8 @@
+/_build
+/cover
+/deps
+/certs
+/config/test.exs
+erl_crash.dump
+*.ez
+*.swp

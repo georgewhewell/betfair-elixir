@@ -1,0 +1,34 @@
+[
+  {
+    "request": {
+      "body": "{\"jsonrpc\":\"2.0\",\"method\":\"SportsAPING/v1.0/listMarketTypes\",\"params\":{\"maxResults\":1,\"filter\":{\"inPlayOnly\":true}}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "X-Authentication": "535510nt0k3n",
+        "X-Application": "app_k3y"
+      },
+      "method": "post",
+      "options": {
+        "ssl_options": {
+          "certfile": "certs/betfair.crt",
+          "keyfile": "certs/betfair.key"
+        }
+      },
+      "request_body": "",
+      "url": "https://api.betfair.com/exchange/betting/json-rpc/v1/"
+    },
+    "response": {
+      "body": "{\"jsonrpc\":\"2.0\",\"result\":[{\"marketType\":\"SET_WINNER\",\"marketCount\":1},{\"marketType\":\"MATCH_ODDS\",\"marketCount\":24},{\"marketType\":\"TRAP_CHALLENGE\",\"marketCount\":1},{\"marketType\":\"CORRECT_SCORE2\",\"marketCount\":13},{\"marketType\":\"HALF_TIME_SCORE\",\"marketCount\":6},{\"marketType\":\"OVER_UNDER_45\",\"marketCount\":11},{\"marketType\":\"TEAM_B_3\",\"marketCount\":7},{\"marketType\":\"HALF_TIME_FULL_TIME\",\"marketCount\":11},{\"marketType\":\"NEXT_GOAL\",\"marketCount\":11},{\"marketType\":\"TOTAL_GOALS\",\"marketCount\":7},{\"marketType\":\"TEAM_A_1\",\"marketCount\":11},{\"marketType\":\"FIRST_HALF_GOALS_15\",\"marketCount\":4},{\"marketType\":\"DRAW_NO_BET\",\"marketCount\":11},{\"marketType\":\"BOTH_TEAMS_TO_SCORE\",\"marketCount\":4},{\"marketType\":\"CORRECT_SCORE\",\"marketCount\":11},{\"marketType\":\"OVER_UNDER_55\",\"marketCount\":11},{\"marketType\":\"OVER_UNDER_75\",\"marketCount\":7},{\"marketType\":\"OVER_UNDER_65\",\"marketCount\":11},{\"marketType\":\"OVER_UNDER_85\",\"marketCount\":7},{\"marketType\":\"DOUBLE_CHANCE\",\"marketCount\":11},{\"marketType\":\"ASIAN_HANDICAP\",\"marketCount\":11},{\"marketType\":\"TEAM_A_2\",\"marketCount\":11},{\"marketType\":\"TEAM_B_1\",\"marketCount\":11},{\"marketType\":\"OVER_UNDER_35\",\"marketCount\":9},{\"marketType\":\"OVER_UNDER_25\",\"marketCount\":6},{\"marketType\":\"TEAM_A_3\",\"marketCount\":7},{\"marketType\":\"TEAM_B_2\",\"marketCount\":11},{\"marketType\":\"OVER_UNDER_15\",\"marketCount\":4},{\"marketType\":\"HALF_TIME\",\"marketCount\":6},{\"marketType\":\"TOTAL_POINTS\",\"marketCount\":2},{\"marketType\":\"HANDICAP\",\"marketCount\":2},{\"marketType\":\"OVER_UNDER_05\",\"marketCount\":3},{\"marketType\":\"FIRST_HALF_GOALS_05\",\"marketCount\":3},{\"marketType\":\"TIED_MATCH\",\"marketCount\":1},{\"marketType\":\"COMPLETED_MATCH\",\"marketCount\":1}]}",
+      "headers": {
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Cache-Control": "no-cache",
+        "Content-Type": "application/json",
+        "Vary": "Accept-Encoding, User-Agent",
+        "Content-Length": "1662"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
