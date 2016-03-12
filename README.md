@@ -1,4 +1,4 @@
-# Betfair
+# betfair-elixir [![Build Status](https://travis-ci.org/georgewhewell/betfair-elixir.svg?branch=master)](https://travis-ci.org/georgewhewell/betfair-elixir)
 A stateful wrapper for Betfair API using [httpoison](https://github.com/edgurgel/httpoison) 
 
 ## Installation
