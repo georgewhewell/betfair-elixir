@@ -8,7 +8,7 @@ defmodule Betfair.BettingTest do
   setup_all do
     {:ok, session_pid} = Betfair.Session.new
     use_cassette "session#login" do
-      wait_for_login session_pid
+      Betfair.Session.login session_pid
     end
     {:ok, session_pid: session_pid}
   end

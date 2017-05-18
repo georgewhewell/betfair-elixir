@@ -1,11 +1,11 @@
 use Mix.Config
 
 config :betfair, [
-  "username": "barack",
-  "password": "obama",
-  "certfile": "test/fixture/certs/test.crt",
-  "keyfile": "test/fixture/certs/test.key",
-  "app_key": "app_k3y"]
+  username: "barack",
+  password: "obama",
+  certfile: "test/fixture/certs/test.crt",
+  keyfile: "test/fixture/certs/test.key",
+  app_key: "app_k3y"]
 
 config :exvcr, [
   filter_sensitive_data: [

@@ -1,5 +1,4 @@
 defmodule Betfair do
-  use Application
   use HTTPoison.Base
 
   @accept [{"Accept", "application/json"}]
@@ -21,15 +20,19 @@ defmodule Betfair do
   def process_response(%HTTPoison.Response{status_code: status_code, body: body}), do: { status_code, JSX.decode!(body) }
 
   def post(client, service, path, body) do
-    options = [ssl: [certfile: client.certfile, keyfile: client.keyfile]]
+    options = [ssl: [certfile: client.cert_file, keyfile: client.key_file]]
     request!(:post, url(service, path), body, application_header(client.app_key, @accept), options) |> process_response
   end
 
   def post_login(identity) do
-    options = [ssl: [certfile: identity.certfile, keyfile: identity.keyfile]]
+    options = [ssl: [certfile: identity.cert_file, keyfile: identity.key_file]]
+    form = {:form, [username: identity.username, password: identity.password]}
     headers = application_header(identity.app_key, @accept)
-    body = {:form, [username: identity.username, password: identity.password]}
-    request!(:post, url(:identity, "certlogin"), body, headers, options) |> process_response
+    data = request!(:post, url(:identity, "certlogin"), form, headers, options)
+    case process_response(data) do
+      %{"loginStatus" => "SUCCESS", "sessionToken" => session_token} -> {:ok, session_token}
+      badresp -> {:error, "Bad response: #{inspect badresp}"}
+    end
   end
 
   def call_rpc(session_pid, service, method, params) do
@@ -37,7 +40,7 @@ defmodule Betfair do
     url = url(service)
     body = make_rpc_body(method, params)
     headers = application_header(session.app_key, session_header(session.session_token, @accept ++ @content_type))
-    options = [ssl: [certfile: session.certfile, keyfile: session.keyfile]]
+    options = [ssl: [certfile: session.cert_file, keyfile: session.key_file]]
     request!(:post, url, body, headers, options) |> process_response
   end
 
@@ -51,13 +54,9 @@ defmodule Betfair do
   end
 
   @spec application_header(binary, list) :: list
-  def application_header(app_key, headers) do
-    headers ++ [{"X-Application", app_key}]
-  end
+  def application_header(app_key, headers), do: [{"X-Application", app_key} | headers]
 
   @spec session_header(binary, list) :: list
-  def session_header(token, headers) do
-    headers ++ [{"X-Authentication", token}]
-  end
+  def session_header(token, headers), do: [{"X-Authentication", token} | headers]
 
 end

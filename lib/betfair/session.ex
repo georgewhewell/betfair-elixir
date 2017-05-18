@@ -1,26 +1,21 @@
 defmodule Betfair.Session do
-  use ExActor.GenServer
 
-  import IO
-  def login(identity) do
-    login_resp = Betfair.post_login identity
-    %{"loginStatus" => "SUCCESS", "sessionToken" => session_token} = login_resp
-    %{app_key: identity.app_key, certfile: identity.certfile, keyfile: identity.keyfile, session_token: session_token}
+  defstruct [:app_key, :cert_file, :key_file, :username, :password, :session_token]
+
+  def new(), do: new Kernel.struct(%__MODULE__{}, Application.get_all_env(:betfair))
+  def new(auth), do: Agent.start_link(fn -> auth end)
+
+  defp _login(state = %__MODULE__{}) do
+    case Betfair.post_login(state) do
+      {:ok, session_token} -> %__MODULE__{ state | session_token: session_token }
+    end
   end
 
-  def new(), do: new(Enum.into(Application.get_all_env(:betfair), %{}))
-  def new(auth), do: GenServer.start_link(Betfair.Session, auth)
+  def login(agent), do: Agent.update(agent, fn state -> _login(state) end)
 
-  definit auth, do: initial_state(auth)
+  defp _token(%__MODULE__{session_token: session_token}) when session_token != nil, do: session_token
+  defp _token(state), do: _token(_login(state))
 
-  defcall wait_for_login, state: state, do: set_and_reply(login(state), :ok)
-
-  defcall get_state, state: state = %{session_token: _}, do: reply(state)
-  defcall get_state, state: state do
-    new_state = login(state)
-    set_and_reply(new_state, new_state)
-  end
-
-  defcall get_token, state: state = %{session_token: session_token}, do: reply(session_token)
-  defcall get_token, state: state, do: reply(nil)
+  def get_state(agent), do: Agent.get(agent, fn state -> state end)
+  def get_token(agent), do: Agent.get(agent, fn state -> _token(state) end)
 end

@@ -37,7 +37,6 @@ defmodule Betfair.Mixfile do
      {:inch_ex, only: :docs},
      {:excoveralls, "~> 0.4", only: :test},
      {:exvcr, "~> 0.7.1", only: :test},
-     {:meck, "~> 0.8", only: :test},
-     {:exactor, "~> 2.2.0"}]
+     {:meck, "~> 0.8", only: :test}]
   end
 end
