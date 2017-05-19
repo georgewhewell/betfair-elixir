@@ -21,7 +21,7 @@
       "headers": {
         "Content-Type": "application/json;charset=UTF-8",
         "Content-Length": "87",
-        "Date": "Mon, 1 Jan 2016 13:37:00 GMT",
+        "Date": "Mon, 1 Jan 2016 13:37:00 GMT"
       },
       "status_code": 200,
       "type": "ok"

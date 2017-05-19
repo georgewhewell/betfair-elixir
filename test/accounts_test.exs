@@ -25,6 +25,12 @@ defmodule Betfair.AccountsTest do
     end
   end
 
+  test "getAccountFunds", context do
+    use_cassette "accounts#getAccountFunds" do
+      assert getAccountFunds(context[:session_pid], [])
+    end
+  end
+
   test "getAccountStatement", context do
     use_cassette "accounts#getAccountStatement" do
       assert getAccountStatement(context[:session_pid])

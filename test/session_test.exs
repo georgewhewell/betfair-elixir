@@ -7,14 +7,28 @@ defmodule Betfair.SessionTest do
   test "login is not performed proactively" do
     use_cassette "session#newsession" do
       {:ok, session_pid} = Betfair.Session.new
-      assert get_token(session_pid) == nil
+      %Betfair.Session{session_token: token} = get_state(session_pid)
+      assert token == nil
     end
   end
 
-  test "login works" do
+  test "login manually" do
     use_cassette "session#login" do
       {:ok, session_pid} = Betfair.Session.new
-      wait_for_login session_pid
+      :ok = Betfair.Session.wait_for_login session_pid
+      %Betfair.Session{session_token: token} = get_state(session_pid)
+      assert token != nil
+    end
+  end
+
+  test "lazy login" do
+    use_cassette "session#lazylogin" do
+      {:ok, session_pid} = Betfair.Session.new
+      %Betfair.Session{session_token: token} = get_state(session_pid)
+      assert token == nil
+      Betfair.Accounts.getAccountDetails session_pid
+      %Betfair.Session{session_token: token} = get_state(session_pid)
+      assert token != nil
     end
   end
 end

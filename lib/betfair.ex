@@ -29,10 +29,15 @@ defmodule Betfair do
     options = [ssl: [certfile: identity.certfile, keyfile: identity.keyfile]]
     headers = application_header(identity.app_key, @accept)
     body = {:form, [username: identity.username, password: identity.password]}
-    request!(:post, url(:identity, "certlogin"), body, headers, options) |> process_response
+    data = request!(:post, url(:identity, "certlogin"), body, headers, options)
+    case process_response(data) do
+      %{"loginStatus" => "SUCCESS", "sessionToken" => session_token} -> {:ok, session_token}
+      badresp -> {:error, "Bad response: #{inspect badresp}"}
+    end
   end
 
   def call_rpc(session_pid, service, method, params) do
+    Betfair.Session.wait_for_login session_pid
     session = Betfair.Session.get_state session_pid
     url = url(service)
     body = make_rpc_body(method, params)
